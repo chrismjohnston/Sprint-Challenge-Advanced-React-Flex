@@ -1,18 +1,13 @@
 import React from 'react';
 import './App.css';
+import axios from 'axios';
+import { useAxios } from './hooks/useAxios.js';
 
-class App extends React.Component {
-  constructor() {
-    super();
-  }
-  render() {
-    return (
-      <div className="App">
-        <h1>It's working</h1>
-      </div>
-    );
-  }
+function App() {
+	const [ data, setData ] = useAxios([]);
+	console.log(data);
+	return <div className="App">{}</div>;
 }
 
-
 export default App;
+
